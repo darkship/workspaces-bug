@@ -1,0 +1,4 @@
+{
+  "extends": "@my-scope/typescript",
+  "include": ["."]
+}

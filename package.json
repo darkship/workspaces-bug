@@ -1,0 +1,25 @@
+{
+  "engines": {
+    "node": "20"
+  },
+  "private": true,
+  "name": "@my-scope/workspaces-bug",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "workspaces": ["tools/*", "libs/*"],
+  "scripts": {
+    "lint": "eslint .",
+    "clean": "git clean -X -d -e \\!.idea/ -e \\!.idea/workspace.xml -f .",
+    "build": "npm run build --if-present --workspaces"
+  },
+  "devDependencies": {
+    "@my-scope/eslint-plugin": "*",
+    "@my-scope/eslint-config": "*",
+    "@my-scope/typescript": "*"
+  },
+  "eslintConfig": {
+    "extends": "@my-scope"
+  }
+}
